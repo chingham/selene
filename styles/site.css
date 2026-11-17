@@ -1,0 +1,133 @@
+/* Shared identity: coral icon, cool whites, blue and green account accents. */
+:root {
+  color-scheme: light;
+  --background: #fafbff;
+  --surface: #fff;
+  --sunken: #f1f4fa;
+  --text: #1c2130;
+  --muted: #657083;
+  --accent: #d3331a;
+  --coral: #ff5f3d;
+  --blue: #008ee8;
+  --blue-soft: #008ee829;
+  --green: #00a364;
+  --grey-line: #a3abba;
+  --border: #e5e9f1;
+  --shadow: 0 18px 50px #1c213017;
+  --shell: 1160px;
+  /* iOS system colors, for the pieces drawn like the app */
+  --ios-bg: #f2f2f7;
+  --ios-card: #fff;
+  --ios-red: #ff3b30;
+  --ios-green: #34c759;
+  --ios-secondary: #3c3c4399;
+  --ios-tertiary: #3c3c434d;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--background); color: var(--text); font-size: 17px; line-height: 1.6; -webkit-text-size-adjust: 100%; }
+img { max-width: 100%; display: block; }
+a { color: var(--accent); text-underline-offset: 4px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--blue); outline-offset: 6px; border-radius: 6px; }
+button { font: inherit; color: inherit; }
+h1, h2, h3, p, figure, ol, ul { margin: 0; }
+h1, h2, h3 { line-height: 1.08; letter-spacing: -.045em; text-wrap: balance; }
+h1, h2 { font-weight: 750; }
+p + p { margin-top: 1rem; }
+
+/* Building blocks */
+.section-shell { width: min(var(--shell), calc(100% - 80px)); margin-inline: auto; }
+.skip-link { position: fixed; top: 10px; left: 10px; z-index: 10; padding: 10px 18px; background: var(--surface); transform: translateY(-180%); }
+.skip-link:focus { transform: translateY(0); }
+.eyebrow { font-size: 11px; line-height: 1.5; letter-spacing: .13em; text-transform: uppercase; font-weight: 650; color: var(--muted); }
+.lede { color: var(--muted); font-size: 19px; line-height: 1.55; max-width: 36ch; }
+.tag { display: inline-flex; align-items: center; padding: 3px 9px; border-radius: 99px; font-size: 11px; font-weight: 700; letter-spacing: .04em; color: var(--accent); background: #d3331a1f; }
+.button { display: inline-flex; gap: 22px; align-items: center; justify-content: center; min-height: 50px; padding: 12px 24px; border-radius: 100px; font-size: 15px; font-weight: 650; text-decoration: none; transition: transform .2s, background-color .2s, box-shadow .2s; }
+.button-primary { color: white; background: var(--accent); box-shadow: 0 6px 18px #d3331a1c; }
+.button-primary:hover { background: #b32a14; transform: translateY(-2px); box-shadow: 0 9px 24px #d3331a26; }
+.button-primary span { font-size: 21px; line-height: 1; }
+/* Apple's badge as provided: never recolored, a quarter of its height clear around it. */
+.app-store-badge { display: inline-block; justify-self: start; padding: 13px 0; line-height: 0; transition: transform .2s; }
+.app-store-badge img { display: block; width: auto; height: 50px; }
+.app-store-badge:hover { transform: translateY(-2px); }
+
+/* Navigation and footer shared by all pages. */
+.site-header { position: sticky; top: 0; z-index: 5; background: #fafbffdf; border-bottom: 1px solid #e5e9f18a; -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); }
+.header-inner { width: min(var(--shell), calc(100% - 80px)); height: 80px; margin-inline: auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; font-size: 23px; font-weight: 700; letter-spacing: -.04em; color: var(--text); text-decoration: none; }
+.site-header nav, .site-footer nav { display: flex; gap: 30px; align-items: center; }
+.site-header nav a { color: var(--muted); font-size: 13px; text-decoration: none; padding-block: 12px; min-height: 44px; display: inline-flex; align-items: center; }
+.site-header nav a:hover, .site-header nav a[aria-current="page"] { color: var(--accent); }
+.site-footer { display: flex; justify-content: space-between; align-items: center; gap: 30px; border-top: 1px solid var(--border); padding-block: 34px 40px; }
+.footer-brand { font-size: 19px; }
+.site-footer p { font-size: 12px; color: var(--muted); margin-top: 10px; }
+.site-footer nav a { font-size: 13px; text-decoration: none; color: var(--muted); }
+.site-footer nav a:hover { color: var(--accent); }
+
+/* Section rhythm of the home page and the guide. */
+.section { padding-block: 88px; }
+.section.tight { padding-top: 0; }
+.section-head { display: grid; gap: 14px; margin-bottom: 40px; max-width: 680px; }
+.section-head h2 { font-size: clamp(34px, 4.4vw, 52px); }
+.more { display: inline-flex; gap: 8px; margin-top: 28px; font-weight: 650; font-size: 15px; text-decoration: none; }
+.more:hover { text-decoration: underline; }
+.footnote { font-size: 13px; color: var(--muted); margin-top: 18px; }
+.closing { display: grid; justify-items: center; gap: 20px; text-align: center; padding-block: 72px 96px; }
+.closing h2 { font-size: clamp(32px, 4.4vw, 50px); max-width: 16ch; }
+.closing p { color: var(--muted); font-size: 14px; }
+.closing .app-store-badge { justify-self: center; }
+
+/* Questions, on the guide and the assistance. */
+.faq-heading { font-size: 28px; margin-bottom: 22px; }
+.faq-list { border: 1px solid var(--border); background: #fff; border-radius: 22px; overflow: hidden; }
+.faq-list details + details { border-top: 1px solid var(--border); }
+.faq-list summary { list-style: none; cursor: pointer; padding: 22px 56px 22px 25px; position: relative; font-size: 16px; font-weight: 600; line-height: 1.5; letter-spacing: -.015em; }
+.faq-list summary:focus-visible { outline-offset: -5px; border-radius: 10px; }
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary::after { content: "+"; position: absolute; right: 25px; top: 20px; font-size: 22px; line-height: 1.2; font-weight: 400; color: var(--accent); }
+.faq-list details[open] summary::after { content: "−"; }
+.faq-list details[open] summary { color: var(--accent); padding-bottom: 12px; }
+.faq-list details p { padding: 0 25px 24px; color: #536075; font-size: 15px; line-height: 1.8; }
+
+@media (max-width: 640px) {
+  .section-shell, .header-inner { width: calc(100% - 40px); }
+  .header-inner { height: 70px; gap: 12px; }
+  .brand { font-size: 21px; gap: 8px; }
+  .brand img { width: 32px; height: 32px; }
+  .site-header nav { gap: 17px; }
+  .site-header nav a { font-size: 11px; }
+  .site-footer { align-items: flex-start; flex-direction: column; padding-block: 28px; gap: 24px; }
+  .site-footer nav { flex-wrap: wrap; gap: 12px 26px; }
+  .section { padding-block: 64px; }
+  .section-head { margin-bottom: 28px; }
+  .lede { font-size: 17px; }
+  .closing { padding-block: 56px 72px; }
+  .faq-list summary { padding-left: 21px; font-size: 15px; }
+  .faq-list details p { padding-left: 21px; padding-right: 21px; font-size: 14px; }
+}
+/* The footer keeps every link. */
+@media (max-width: 520px) { .site-header nav .optional { display: none; } }
+@media (max-width: 360px) {
+  .section-shell, .header-inner { width: calc(100% - 32px); }
+  .site-header nav { gap: 11px; }
+  .site-header nav a { font-size: 10px; }
+}
+
+/* Entry motion is brief and never gates reading or navigation. */
+@keyframes arrive { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) {
+  :root { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .site-header { background: var(--background); backdrop-filter: none; -webkit-backdrop-filter: none; }
+}
+@media print {
+  .site-header { position: static; }
+  .skip-link, .site-footer nav { display: none; }
+  .section-shell, .header-inner { width: 100%; }
+  body { background: white; }
+}

@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-itunes-app" content="app-id=6821384647">
+  <meta name="theme-color" content="#fafbff">
+  <title>Selene : comment ça marche</title>
+  <meta name="description" content="Démarrer avec Selene en cinq minutes : votre solde, ce qui arrive, vos budgets, le pointage avec votre relevé et la comparaison avec votre banque.">
+  <!-- Link preview in messaging apps (Open Graph) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Selene">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:url" content="https://chingham.github.io/selene/guide.html">
+  <meta property="og:title" content="Selene : comment ça marche">
+  <meta property="og:description" content="Cinq minutes pour démarrer. Ce que vous faites, et ce que Selene fait pour vous.">
+  <meta property="og:image" content="https://chingham.github.io/selene/apercu.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Selene sur iPhone : la liste des comptes et les opérations du mois.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-dark.png" media="(prefers-color-scheme: dark)">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="styles/site.css">
+  <link rel="stylesheet" href="styles/app-pieces.css">
+  <link rel="stylesheet" href="styles/guide.css">
+  <script type="module" src="scripts/guide.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Selene, accueil"><img src="icon.png" alt="" width="36" height="36">Selene</a>
+      <nav aria-label="Navigation principale">
+        <a href="guide.html" aria-current="page">Comment ça marche</a>
+        <a class="optional" href="confidentialite.html">Confidentialité</a>
+        <a href="assistance.html">Assistance</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="guide-hero section-shell" aria-labelledby="guide-title">
+      <p class="eyebrow">Comment ça marche</p>
+      <h1 id="guide-title">Cinq minutes pour démarrer.</h1>
+      <p class="lede">Sans inscription ni connexion bancaire. Ce que vous faites, et ce que Selene fait pour vous.</p>
+    </section>
+
+    <ol class="guide-steps section-shell">
+      <li class="guide-step">
+        <div class="guide-copy">
+          <span class="step">Étape 1</span>
+          <h2>Partez de votre solde</h2>
+          <p>Nommez le compte que vous suivez (courant, joint, livret) et recopiez le solde que votre banque affiche aujourd'hui.</p>
+          <p class="selene-does"><b>Selene</b> prépare treize catégories, que vous pourrez changer.</p>
+        </div>
+        <div class="guide-visual">
+          <div class="field"><span>Compte</span><b>Compte courant</b></div>
+          <div class="field"><span>Solde aujourd'hui</span><b>1 640,00 €</b></div>
+        </div>
+      </li>
+      <li class="guide-step">
+        <div class="guide-copy">
+          <span class="step">Étape 2</span>
+          <h2>Ajoutez ce qui arrive</h2>
+          <p>Loyer, salaire, abonnements : une ligne, une date, et si elle revient.</p>
+          <p class="selene-does"><b>Selene</b> la répète chaque semaine, mois ou année.</p>
+        </div>
+        <div class="guide-visual">
+          <div class="op virtual" style="--c:#5c7bff">
+            <span class="cat"></span>
+            <div class="op-main">
+              <div class="op-line"><span class="op-title"><svg aria-hidden="true"><use href="glyphes.svg#house"/></svg>Loyer</span><span class="op-amt neg">-780,00 €</span></div>
+              <div class="op-line sub"><span>5 déc. · chaque mois</span><span>1 854,20 €</span></div>
+            </div>
+            <svg class="ellipsis" aria-hidden="true"><use href="glyphes.svg#ellipsis"/></svg>
+          </div>
+          <div class="segmented" aria-hidden="true"><span>Une fois</span><span>Semaine</span><span class="on">Mois</span><span>Année</span></div>
+          <div class="op virtual" style="--c:#bf7600">
+            <span class="cat"></span>
+            <div class="op-main">
+              <div class="op-line"><span class="op-title"><svg aria-hidden="true"><use href="glyphes.svg#bolt"/></svg>Assurance auto</span><span class="op-amt neg">-420,00 €</span></div>
+              <div class="op-line sub"><span>12 mars · chaque année</span><span>3 104,90 €</span></div>
+            </div>
+            <svg class="ellipsis" aria-hidden="true"><use href="glyphes.svg#ellipsis"/></svg>
+          </div>
+        </div>
+      </li>
+      <li class="guide-step">
+        <div class="guide-copy">
+          <span class="step">Étape 3</span>
+          <h2>Réservez vos budgets</h2>
+          <p>Courses, essence, sorties : des montants qui varient et tombent au fil du mois. Réservez une enveloppe, chaque achat s'en déduit.</p>
+          <p class="selene-does"><b>Selene</b> dessine une fourchette : où vous finirez selon vos achats.</p>
+        </div>
+        <div class="guide-visual">
+          <div class="op budget" style="--c:#52a000">
+            <span class="cat"></span>
+            <div class="op-main">
+              <div class="op-line"><span class="op-title"><svg aria-hidden="true"><use href="glyphes.svg#cart"/></svg>Courses</span><span class="op-amt">reste 226 €</span></div>
+              <div class="gauge" aria-hidden="true"><span></span></div>
+              <div class="op-line sub"><span>174 € dépensés</span><span>sur 400 €</span></div>
+            </div>
+          </div>
+          <div class="ios-card">
+            <svg class="chart static" id="guide-chart" role="img" aria-label="Exemple de fourchette : le solde attendu descend en pente au milieu d'une zone, et rejoint un point exact le dernier jour du mois."></svg>
+          </div>
+        </div>
+      </li>
+      <li class="guide-step">
+        <div class="guide-copy">
+          <span class="step">Étape 4</span>
+          <h2>Pointez avec votre relevé</h2>
+          <p>Une ligne apparaît sur votre relevé ? Touchez son rond. Une dépense oubliée ? Ajoutez-la, déjà pointée.</p>
+          <p class="selene-does"><b>Selene</b> ne la compte jamais deux fois.</p>
+        </div>
+        <div class="guide-visual">
+          <div class="op planned" style="--c:#5c7bff">
+            <span class="cat"></span>
+            <div class="op-main">
+              <div class="op-line"><span class="op-title"><svg aria-hidden="true"><use href="glyphes.svg#bolt"/></svg>Électricité</span><span class="op-amt neg">-86,00 €</span></div>
+              <div class="op-line sub"><span>18 nov.</span><span>1 554,00 €</span></div>
+            </div>
+            <button class="mark" type="button" data-autoplay aria-pressed="false" aria-label="Pointer Électricité"><span class="ring"></span><span class="ripple"></span><span class="drop"></span><svg class="tick" viewBox="0 0 24 24"><path pathLength="1" d="M6.96 12.36 10.44 15.84 17.04 8.64"/></svg></button>
+          </div>
+          <div class="op" style="--c:#52a000">
+            <span class="cat"></span>
+            <div class="op-main">
+              <div class="op-line"><span class="op-title"><svg aria-hidden="true"><use href="glyphes.svg#cart"/></svg>Supermarché</span><span class="op-amt neg">-86,40 €</span></div>
+              <div class="op-line sub"><span>12 nov. · Courses</span><span>1 658,90 €</span></div>
+            </div>
+            <button class="mark is-on" type="button" aria-pressed="true" aria-label="Pointer Supermarché"><span class="ring"></span><span class="ripple"></span><span class="drop"></span><svg class="tick" viewBox="0 0 24 24"><path pathLength="1" d="M6.96 12.36 10.44 15.84 17.04 8.64"/></svg></button>
+          </div>
+          <div class="op" style="--c:#5c7bff">
+            <span class="cat"></span>
+            <div class="op-main">
+              <div class="op-line"><span class="op-title"><svg aria-hidden="true"><use href="glyphes.svg#house"/></svg>Loyer</span><span class="op-amt neg">-780,00 €</span></div>
+              <div class="op-line sub"><span>5 nov.</span><span>2 020,00 €</span></div>
+            </div>
+            <button class="mark is-on" type="button" aria-pressed="true" aria-label="Pointer Loyer"><span class="ring"></span><span class="ripple"></span><span class="drop"></span><svg class="tick" viewBox="0 0 24 24"><path pathLength="1" d="M6.96 12.36 10.44 15.84 17.04 8.64"/></svg></button>
+          </div>
+        </div>
+      </li>
+      <li class="guide-step">
+        <div class="guide-copy">
+          <span class="step">Étape 5</span>
+          <h2>Vérifiez avec la banque</h2>
+          <p>De temps en temps, tapez le solde que votre banque affiche.</p>
+          <p class="selene-does"><b>Selene</b> trouve l'écart et les lignes qui l'expliquent. Vous validez d'un geste.</p>
+        </div>
+        <div class="guide-visual">
+          <div class="figure-card"><span class="label">Écart avec la banque</span><span class="value">25,30 €</span><span class="label">La banque affiche moins que Selene.</span></div>
+          <div class="op planned" style="--c:#52a000">
+            <span class="cat"></span>
+            <div class="op-main">
+              <div class="op-line"><span class="op-title"><svg aria-hidden="true"><use href="glyphes.svg#cart"/></svg>Boulangerie</span><span class="op-amt neg">-6,40 €</span></div>
+              <div class="op-line sub"><span>14 nov. · Courses</span><span>1 633,60 €</span></div>
+            </div>
+            <button class="mark" type="button" aria-pressed="false" aria-label="Pointer Boulangerie"><span class="ring"></span><span class="ripple"></span><span class="drop"></span><svg class="tick" viewBox="0 0 24 24"><path pathLength="1" d="M6.96 12.36 10.44 15.84 17.04 8.64"/></svg></button>
+          </div>
+          <div class="op planned" style="--c:#f13746">
+            <span class="cat"></span>
+            <div class="op-main">
+              <div class="op-line"><span class="op-title"><svg aria-hidden="true"><use href="glyphes.svg#cross"/></svg>Pharmacie</span><span class="op-amt neg">-18,90 €</span></div>
+              <div class="op-line sub"><span>13 nov.</span><span>1 640,00 €</span></div>
+            </div>
+            <button class="mark" type="button" aria-pressed="false" aria-label="Pointer Pharmacie"><span class="ring"></span><span class="ripple"></span><span class="drop"></span><svg class="tick" viewBox="0 0 24 24"><path pathLength="1" d="M6.96 12.36 10.44 15.84 17.04 8.64"/></svg></button>
+          </div>
+        </div>
+      </li>
+      <li class="guide-step">
+        <div class="guide-copy">
+          <span class="step">Et ensuite</span>
+          <h2>Voyez plus loin</h2>
+          <p>Ce que vous avez noté nourrit la projection et les statistiques, sans rien faire de plus.</p>
+          <p class="selene-does"><b>Selene</b> vous dit quand un objectif d'épargne sera atteint, et où part votre argent.</p>
+        </div>
+        <div class="guide-visual">
+          <div class="ios-card facts">
+            <div><span>Objectif 4 000 €</span><b>Vers juin 2027</b></div>
+            <div><span>Point bas</span><b>2 010 € en janvier</b></div>
+          </div>
+          <div class="ios-card trend">
+            <div class="trend-head"><b>Restaurants</b><span>142 € / mois</span></div>
+            <div class="trend-bars" aria-hidden="true"><i style="height:52%"></i><i style="height:61%"></i><i style="height:48%"></i><i style="height:66%"></i><i style="height:72%"></i><i style="height:96%"></i></div>
+          </div>
+        </div>
+      </li>
+    </ol>
+
+    <section class="section guide-questions section-shell" aria-labelledby="faq-title">
+      <h2 id="faq-title" class="faq-heading">Questions fréquentes</h2>
+      <div class="faq-list">
+        <details><summary>Pourquoi pas de connexion à ma banque ?</summary><p>C'est voulu. Vous notez ce qui arrive avant que ça passe : c'est ce qui permet de voir la suite. Et vos identifiants bancaires restent à vous.</p></details>
+        <details><summary>Faut-il créer un compte Selene ?</summary><p>Non. Le seul "compte" que vous créez, c'est celui que vous suivez dans l'app, comme votre compte courant. Aucune inscription, aucun mot de passe.</p></details>
+        <details><summary>C'est long à tenir ?</summary><p>Les lignes qui reviennent se répètent seules. Il reste à pointer ce qui passe, quelques minutes par semaine.</p></details>
+        <details><summary>Et si j'oublie une dépense ?</summary><p>Comparez avec le solde de votre banque : Selene montre l'écart et les lignes qui l'expliquent probablement.</p></details>
+        <details><summary>Où sont mes données ?</summary><p>Sur vos appareils et, si vous l'utilisez, dans votre iCloud personnel. Aucune publicité, aucun traceur.</p></details>
+      </div>
+      <a class="more" href="assistance.html">D'autres questions ? L'assistance <span aria-hidden="true">→</span></a>
+    </section>
+
+    <section class="closing section-shell" aria-labelledby="guide-closing-title">
+      <h2 id="guide-closing-title">Prêt à voir la suite ?</h2>
+      <a class="app-store-badge" href="https://apps.apple.com/fr/app/selene-comptes-budget/id6821384647"><img src="badge-app-store.svg" alt="Télécharger dans l'App Store" width="158" height="50" loading="lazy"></a>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <div><a class="brand footer-brand" href="index.html"><img src="icon.png" alt="" width="28" height="28">Selene</a><p>Par un développeur indépendant français.</p></div>
+    <nav aria-label="Liens utiles"><a href="guide.html">Comment ça marche</a><a href="confidentialite.html">Confidentialité</a><a href="assistance.html">Assistance</a></nav>
+  </footer>
+</body>
+</html>

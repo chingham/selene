@@ -1,0 +1,92 @@
+/* Pieces drawn like the app, on the home page and the guide: rows, pointing mark, cards, charts. */
+
+/* Operation rows (OperationRowView): planned at half opacity, virtual occurrences fainter */
+.ios-list { background: var(--ios-bg); border-radius: 18px; padding: 10px; display: grid; gap: 8px; }
+.op { display: grid; grid-template-columns: 4px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 10px 6px 10px 11px; border-radius: 16px; background: var(--ios-card); box-shadow: 0 2px 4px #00000006; transition: background .2s; }
+.op.planned { background: #ffffff80; box-shadow: none; }
+.op.virtual { background: #ffffff4d; box-shadow: none; }
+.op .cat { width: 4px; height: 44px; border-radius: 2px; background: var(--c); }
+.op-main { display: grid; gap: 4px; min-width: 0; }
+.op-line { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.op-title { display: inline-flex; align-items: baseline; gap: 6px; font-size: 15px; font-weight: 650; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.op-title svg { width: 12px; height: 12px; flex: none; fill: var(--c); align-self: center; }
+.op-amt { font-size: 15px; font-weight: 650; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.op-amt.neg { color: var(--ios-red); }
+.op-amt.pos { color: var(--ios-green); }
+.op-line.sub { font-size: 12px; color: var(--ios-secondary); font-variant-numeric: tabular-nums; }
+.op.virtual .op-title { color: var(--ios-secondary); }
+.op.virtual .op-line.sub { color: var(--ios-tertiary); }
+.op.virtual .op-amt { opacity: .72; }
+.op .ellipsis { width: 20px; height: 20px; margin: 0 9px; fill: var(--ios-tertiary); }
+.op.budget { grid-template-columns: 4px minmax(0, 1fr); }
+.gauge { height: 8px; border-radius: 99px; background: #3c3c4326; overflow: hidden; }
+.gauge span { display: block; height: 100%; width: 43%; background: #52a000; border-radius: inherit; }
+
+/* Pointing mark (PointingMark.swift): the icon's point drops in, then the checkmark draws */
+.mark { position: relative; width: 20px; height: 20px; margin: 0 9px; padding: 0; border: 0; background: none; cursor: pointer; flex: none; }
+.mark::after { content: ""; position: absolute; inset: -12px -9px; }
+.mark .ring, .mark .drop, .mark .ripple { position: absolute; inset: 0; border-radius: 50%; }
+.mark .ring { border: 2px solid var(--ios-tertiary); }
+.mark .drop { background: var(--accent); transform: scale(0); opacity: 0; }
+.mark .ripple { border: 1.3px solid var(--accent); opacity: 0; }
+.mark .tick { position: absolute; inset: 0; width: 100%; height: 100%; fill: none; stroke: #fff; stroke-width: 2.64; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 1; }
+.mark.is-on .ring { opacity: 0; }
+.mark.is-on .drop { transform: none; opacity: 1; }
+.mark.is-on .tick { stroke-dashoffset: 0; }
+.mark.anim-in .ring { animation: ring-out .08s linear .13s both; }
+.mark.anim-in .drop { animation: drop-land .49s both; }
+.mark.anim-in .ripple { animation: ripple .5s cubic-bezier(.15, .6, .35, 1) .16s both; }
+.mark.anim-in .tick { animation: tick-in .14s cubic-bezier(.2, .8, .2, 1) .17s both; }
+.mark.anim-out .ring { animation: ring-in .12s linear .04s both; }
+.mark.anim-out .drop { animation: vanish .12s ease-in both; }
+.mark.anim-out .tick { animation: tick-out .08s ease-in both; }
+@keyframes ring-out { from { opacity: 1; } to { opacity: 0; } }
+@keyframes ring-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes drop-land {
+  0% { transform: translateY(-14px) scale(.31); opacity: 0; animation-timing-function: cubic-bezier(.5, 0, .8, .45); }
+  9% { opacity: 1; }
+  26.5% { transform: translateY(0) scale(.31); opacity: 1; animation-timing-function: ease-out; }
+  50% { transform: scale(1.25); }
+  68% { transform: scale(.93); }
+  84% { transform: scale(1.02); }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes ripple { 0% { transform: scale(1); opacity: 0; } 4% { opacity: .45; } 100% { transform: scale(1.8); opacity: 0; } }
+@keyframes tick-in { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes tick-out { from { stroke-dashoffset: 0; } to { stroke-dashoffset: 1; } }
+@keyframes vanish { from { transform: scale(1); opacity: 1; } to { transform: scale(0); opacity: 1; } }
+
+/* Cards and form rows */
+.ios-card { background: var(--ios-card); border-radius: 22px; padding: 12px; display: grid; gap: 10px; }
+.figure-card { background: var(--ios-card); border-radius: 16px; padding: 12px 14px; display: grid; gap: 2px; }
+.figure-card .label { font-size: 12px; color: var(--ios-secondary); font-weight: 600; }
+.figure-card .value { font-size: 26px; font-weight: 750; letter-spacing: -.035em; font-variant-numeric: tabular-nums; }
+.figure-card .value.low { color: var(--coral); }
+.field { background: var(--ios-card); border-radius: 12px; padding: 12px 14px; display: flex; justify-content: space-between; gap: 12px; font-size: 15px; }
+.field span { color: var(--ios-secondary); }
+.field b { font-weight: 600; font-variant-numeric: tabular-nums; }
+.segmented { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); background: #3c3c432e; border-radius: 10px; padding: 2px; font-size: 12px; text-align: center; }
+.segmented span { padding: 5px 2px; border-radius: 8px; color: var(--ios-secondary); }
+.segmented span.on { background: var(--ios-card); color: var(--text); font-weight: 650; box-shadow: 0 1px 2px #0000001a; }
+
+/* Projection facts and a category's months (Statistics) */
+.facts { display: grid; }
+.facts div { display: flex; justify-content: space-between; gap: 12px; padding: 9px 2px; font-size: 14px; border-top: 1px solid var(--border); }
+.facts div:first-child { border-top: 0; }
+.facts span { color: var(--ios-secondary); }
+.facts b { font-weight: 650; font-variant-numeric: tabular-nums; text-align: right; }
+.trend { display: grid; gap: 8px; }
+.trend-head { display: flex; justify-content: space-between; gap: 8px; font-size: 13px; }
+.trend-head span { color: var(--ios-secondary); }
+.trend-bars { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; align-items: end; height: 70px; position: relative; }
+.trend-bars i { display: block; border-radius: 5px 5px 2px 2px; background: #dd5b00bf; }
+.trend-bars i:last-child { background: #dd5b00; }
+.trend-bars::after { content: ""; position: absolute; left: 0; right: 0; bottom: 58%; border-top: 1.5px dashed var(--ios-secondary); opacity: .6; }
+.trend-months { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; font-size: 10.5px; color: var(--ios-secondary); text-align: center; }
+
+/* Balance chart (balance-chart.js): past in grey, the computed rest dashed in blue, the budget band */
+.chart { width: 100%; height: 240px; display: block; touch-action: pan-y; cursor: crosshair; user-select: none; -webkit-user-select: none; }
+.chart text { font-size: 11px; fill: var(--muted); }
+.chart .end-label { font-size: 12px; font-weight: 700; fill: var(--blue); }
+.chart.static { height: 160px; cursor: default; }
+@media (max-width: 860px) { .chart { height: 200px; } }

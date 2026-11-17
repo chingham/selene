@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <!-- Category glyphs of the rows drawn like the app, close to their SF Symbols -->
+  <symbol id="cart" viewBox="0 0 24 24"><path d="M3 4h2.4l2.2 10.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.5L21 8H7"/><circle cx="10" cy="20" r="1.8"/><circle cx="17" cy="20" r="1.8"/></symbol>
+  <symbol id="house" viewBox="0 0 24 24"><path d="M12 3 2 11.5h3V21h5.5v-6h3v6H19v-9.5h3z"/></symbol>
+  <symbol id="cross" viewBox="0 0 24 24"><path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z"/></symbol>
+  <symbol id="banknote" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2.5"/></symbol>
+  <symbol id="bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></symbol>
+  <!-- Mark of a virtual occurrence (ellipsis.circle.fill) -->
+  <symbol id="ellipsis" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><g fill="var(--ios-card)"><circle cx="7.5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="16.5" cy="12" r="1.5"/></g></symbol>
+</svg>
